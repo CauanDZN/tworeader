@@ -43,7 +43,7 @@ function App() {
 
       {/* Upload PDF */}
       <form>
-        <img src='../public/tworeader.png' width="300px"></img>
+        <img src="../../src/assets/tworeader.png" width="300px"></img>
         <a href="https://tworeader.vercel.app" target="_blank" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">Clique para carregar mais de um PDF</a>
         <br></br>
         <br></br>
