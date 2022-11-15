@@ -6,6 +6,8 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 
+import tworeaderImg from "../src/assets/tworeader.svg";
+
 function App() {
 
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
@@ -44,7 +46,7 @@ function App() {
       {/* Upload PDF */}
       <form>
         <picture>
-          <img src="../../src/assets/tworeader.svg" width="300px"></img>
+          <img src={tworeaderImg} width="300px"></img>
         </picture>
         
         <a href="https://tworeader.vercel.app" target="_blank" className="btn btn-primary btn-lg active" role="button" aria-pressed="true">Clique para carregar mais de um PDF</a>
