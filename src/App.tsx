@@ -25,12 +25,12 @@ function App() {
         reader.readAsDataURL(selectedFile);
         reader.onloadend=(e)=>{
           setPdfError('');
-          setPdfFile(e.target.result);
+          setPdfFile(e.target?.result);
         }
       }
       else{
         setPdfError('Por favor, selecione um PDF!');
-        setPdfFile('');
+        setPdfFile("");
       }
     }
     else{
