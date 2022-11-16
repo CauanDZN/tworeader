@@ -4,10 +4,20 @@ import { Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+import { OnHighlightKeyword } from '@react-pdf-viewer/search';
 
 export function Reader(){
 
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+  const defaultLayoutPluginInstance = defaultLayoutPlugin({
+    toolbarPlugin: {
+        searchPlugin: {
+            onHighlightKeyword: (props: OnHighlightKeyword) => {
+              props.highlightEle.style.outline = '2px solid blue';
+              props.highlightEle.style.backgroundColor = 'rgba(0, 0, 0, .1)';
+            },
+        },
+    },
+});
 
   const [pdfFile, setPdfFile]=useState(null);
 
