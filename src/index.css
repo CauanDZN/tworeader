@@ -15,3 +15,13 @@ form{
 span{
   margin-top: 3px;
 }
+
+.pdfdiv{
+  display: flex;
+  justify-content: center;
+}
+
+.image{
+  display: flex;
+  align-items: center;
+}
